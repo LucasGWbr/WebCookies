@@ -149,7 +149,7 @@ public class DAOPessoa implements IDao<Pessoa, String> {
         }
     }
 
-    public boolean verifyUP(Pessoa var1) throws senhaerradaException {
+    public boolean verifyUP(Pessoa var1) throws senhaerradaException, DataBaseException {
         Pessoa pess = null;
         try {
             Class.forName("org.postgresql.Driver");
@@ -180,6 +180,7 @@ public class DAOPessoa implements IDao<Pessoa, String> {
 
         } catch (DataBaseException ex) {
             System.out.println(ex.getMessage());
+            throw new DataBaseException("Falha de conexão com DB");
         } catch (SQLException ex) {
             Logger.getLogger(DAOPessoa.class.getName()).log(Level.SEVERE, null, ex);
         }

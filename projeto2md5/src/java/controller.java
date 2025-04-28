@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 import negocio.Pessoa;
 import negocio.cripto;
 import persistencia.DAOPessoa;
+import persistencia.DataBaseException;
 
 /**
  *
@@ -110,8 +111,9 @@ public class controller extends HttpServlet {
                 //mandar pra tela de cadastro
                 dispatcher = request.getRequestDispatcher("login.jsp");
                 request.setAttribute("mensagem", "Senha incorreta!");
-
-                
+            } catch(DataBaseException ex){
+                dispatcher = request.getRequestDispatcher("login.jsp");
+                request.setAttribute("mensagem", "Falha de conexão com o banco de dados!");
             }
             
         }
