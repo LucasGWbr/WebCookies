@@ -58,7 +58,8 @@
     <h1>
         MENU
     </h1>
-    <div style="background-color: white; opacity:60%;"> <h6 style="color:green;"> Logado como: ${pessoa.nome}</h6>
+    <div style="background-color: white; opacity:60%;"> 
+        <h6 style="color:green;"> Logado como: <strong>${pessoa.nome}</strong></h6>
         <br> 
         <a href="login.jsp">LOGOUT</a>
     </div>

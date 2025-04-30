@@ -102,7 +102,7 @@ public class controller extends HttpServlet {
                 }else{
                     dao.create(p);
                     
-                    request.setAttribute("mensagem", "Usuario não, agora foi criado, pode logar!");
+                    request.setAttribute("mensagem", "Usuario não encontrado, agora foi criado, pode logar!");
                     dispatcher = request.getRequestDispatcher("login.jsp");
                     //false
                 }
