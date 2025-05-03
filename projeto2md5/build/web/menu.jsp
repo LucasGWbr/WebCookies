@@ -69,13 +69,13 @@
     <div class="container">
         <div class="row p-4">
             <div class="col-4">
-                <a href="pagina"><img src="https://sempretopgames.com.br/wp-content/uploads/2023/09/melhores-Video-games.webp" alt="video-games"></a>
+                <a href="videogame.jsp"><img src="img/videog.png" alt="video-games"></a>
             </div>
             <div class="col-4">
-                <a href="pagina"><img src="https://www.infoescola.com/wp-content/uploads/2013/01/t%C3%AAnis-de-mesa_340048448.jpg" alt="tenis-de-mesa"></a>
+                <a href="pagina"><img src="img/tenis.jpg" alt="tenis-de-mesa"></a>
             </div>
             <div class="col-4">
-                <a href="pagina"><img src="https://cinema10.com.br/upload/noticias/2019-2/2192602189.jpg" alt="cinema"></a>
+                <a href="pagina"><img src="img/filme.jpg" alt="cinema"></a>
             </div>
         </div>
 
