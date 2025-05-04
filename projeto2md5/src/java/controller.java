@@ -12,6 +12,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -96,6 +97,9 @@ public class controller extends HttpServlet {
             Pessoa p = new Pessoa(user,pass);
             try {
                 if(dao.verifyUP(p)){
+                    HttpSession session = request.getSession();
+                    session.setAttribute("user", user);
+                    
                     dispatcher = request.getRequestDispatcher("menu.jsp");
                     request.setAttribute("pessoa", p);
                     //true

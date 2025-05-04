@@ -17,12 +17,28 @@
             </style>
     </head>
     <body>
+        <%
+            String user= (String) session.getAttribute("user");
+            Cookie[] cookies = null;
+            cookies = request.getCookies();
+            int n = 0;
+                for (Cookie c : cookies) {
+                    if (c.getName().equals(user+"_videogame")) {
+                        n = Integer.parseInt(c.getValue());
+                    }
+                }
+            Cookie vg =  new Cookie(user+"_videogame", String.valueOf(n+1));
+            vg.setMaxAge(60*60);
+            response.addCookie(vg);
+            %>
         <div class="centrali"><h1>CS 2</h1></div>
         <div class="centrali">
         <img src="gif/cs1.gif"> 
         <img src="gif/cs2.gif"> 
         <img src="gif/cs3.gif">            
         </div>
+        <div style="text-align: center;padding: 20px;"><a href="menu.jsp">VOLTAR</a></div>
+
 
     </body>
 </html>

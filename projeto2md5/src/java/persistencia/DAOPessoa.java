@@ -186,8 +186,6 @@ public class DAOPessoa implements IDao<Pessoa, String> {
         }
         if (pess != null) {
             if (var1.getNome().equalsIgnoreCase(pess.getNome())) {
-                System.out.println(var1.getSenha());
-                System.out.println(pess.getSenha());
                 if (var1.getSenha().equals(pess.getSenha())) {
                     return true;
                 }else{

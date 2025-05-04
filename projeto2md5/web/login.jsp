@@ -9,6 +9,9 @@
 <html lang="pt-br">
 
 <head>
+    <%
+        session.invalidate();
+        %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina web</title>
@@ -72,8 +75,8 @@
                             <label for="nome">Nome</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input name="pass" type="password" class="form-control" id="pass" placeholder="Senha" autocomplete="password" onkeyup="verify()">
-                            <label for="password">Senha</label>
+                            <input name="pass" type="password" class="form-control" id="pass" placeholder="Senha" onkeyup="verify()">
+                            <label for="pass">Senha</label>
                         </div>
                     </div>
                     <div class="botao">
