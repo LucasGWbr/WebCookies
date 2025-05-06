@@ -64,6 +64,14 @@
             .row{
                 padding-top: 0px;
             }
+            .caixalg{
+                background-color: whitesmoke;
+                display: grid;
+                justify-items: center;
+                border-radius: 5px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
 
 
 
@@ -76,14 +84,14 @@
         <h1>
             MENU
         </h1>
-        <div style="background-color: white; opacity:60%;"> 
+        <div class="caixalg"> 
             <%
                 String p = (String) session.getAttribute("user");
                 request.setAttribute("pessoa", p);
             %>
-            <h6 style="color:green;"> Logado como: <strong>${pessoa}</strong></h6>
+            <h6> Bem vindo <strong>${pessoa}</strong></h6>
             <br> 
-            <a href="login.jsp">LOGOUT</a>
+            <a href="login.jsp"><button type="button" class="btn btn-danger">LOGOUT</button></a>
         </div>
     </header>
 
